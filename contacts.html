@@ -265,6 +265,7 @@
               e.preventDefault();
               grecaptcha.enterprise.ready(async () => {
                 const token = await grecaptcha.enterprise.execute('6LegyagpAAAAAHxCs3YQKZu7FIjzhUJY0dzOhdFG', {action: 'submit'});
+                console.log(token)
                 let response = await fetch('api/verify.php', {
                     method: 'POST',
                     headers: {

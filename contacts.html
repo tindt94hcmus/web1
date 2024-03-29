@@ -259,12 +259,12 @@
 
         <!-- recaptcha -->
       
-        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LegyagpAAAAAHxCs3YQKZu7FIjzhUJY0dzOhdFG"></script>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf39agpAAAAAG1DuQbO-rVv2VIizbLKdHie33Nq"></script>
         <script>
             function onSubmit(e) {
               e.preventDefault();
               grecaptcha.enterprise.ready(async () => {
-                const token = await grecaptcha.enterprise.execute('6LegyagpAAAAAHxCs3YQKZu7FIjzhUJY0dzOhdFG', {action: 'submit'});
+                const token = await grecaptcha.enterprise.execute('6Lf39agpAAAAAG1DuQbO-rVv2VIizbLKdHie33Nq', {action: 'submit'});
                 console.log(token)
                 let response = await fetch('api/verify.php', {
                     method: 'POST',
